@@ -1,0 +1,59 @@
+## Novo Aluno
+POST /api/v1/alunos HTTP/1.1
+Host: localhost:8080
+Content-Type: application/json
+
+{
+    "nome":"Alex Castanheira",
+    "email":"alex@aluno.riogrande.ifrs.edu.br",
+    "cpf":"1234678901"
+}
+
+### Get All
+GET /api/v1/alunos HTTP/1.1
+Host: localhost:8080
+Accept: application/json
+
+### Get Aluno por CPF
+GET /api/v1/alunos/1234678901 HTTP/1.1
+Host: localhost:8080
+Accept: application/json
+
+### Novo Professor
+POST /api/v1/professores HTTP/1.1
+Host: localhost:8080
+Content-Type: application/json
+
+{
+    "siape":"1810497",
+    "formacao":"Eng Software",
+    "nome":"Márcio Torres"
+}
+
+### Nova Disciplina
+POST /api/v1/disciplinas HTTP/1.1
+Host: localhost:8080
+Content-Type: application/json
+
+{
+    "nome":"Princípios e Padrões de Projetos",
+    "ementa":"Texto muito longo....",
+    "cargaHoraria":66,
+    "aulaSemanais":4,
+    "codeName":"PPP",
+    "preRequisito":[]
+}
+
+### Nova Disciplina
+POST /api/v1/disciplinas HTTP/1.1
+Host: localhost:8080
+Content-Type: application/json
+
+{
+    "nome":"Princípios e Padrões de Arquitetura",
+    "ementa":"Texto muito longo....",
+    "cargaHoraria":66,
+    "aulaSemanais":4,
+    "codeName":"PPA",
+    "preRequisito":["PPP"]
+}
